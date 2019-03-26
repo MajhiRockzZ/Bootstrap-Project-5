@@ -9,6 +9,7 @@
     integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
     integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
   <link rel="stylesheet" href="css/style.css">
   <title>Portfoliogrid</title>
 </head>
@@ -175,6 +176,64 @@
       </div>
     </div>
 
+    <!-- WORK -->
+    <div id="work" class="collapse">
+      <div class="card card-body bg-warning text-white py-5">
+        <h2>My Work</h2>
+        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, unde!</p>
+      </div>
+
+      <div class="card card-body py-5">
+        <h3>What Have I Built?</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente expedita velit deserunt adipisci ratione
+          voluptatibus.</p>
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=252" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=253" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=254" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=255" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=256" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=257" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=257" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=258" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=258" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=259" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=259" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <!-- FOOTER -->
     <footer id="main-footer" class="p-5 bg-dark text-white">
@@ -197,10 +256,16 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
     integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
 
   <script>
     $('.port-item').click(function () {
       $('.collapse').collapse('hide');
+    });
+
+    $(document).on('click', '[data-toggle="lightbox"]', function (e) {
+      e.preventDefault();
+      $(this).ekkoLightbox();
     });
   </script>
 </body>
